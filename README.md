@@ -1,5 +1,6 @@
-# Integrante: Fernando Ariel Chandia Molina
-# Email: fernando_chandia05@inacapmail.cl
+## Autor
+Fernando Ariel Chandia Molina
+Email: fernando_chandia05@inacapmail.cl
 
 # Proyecto Django: Géneros de Películas
 
@@ -101,7 +102,3 @@ Abrir en el navegador: http://127.0.0.1:8000/
 - Bootstrap 5 (CDN)
 - HTML, CSS y JavaScript
 
-## Autores
-
-- Fernando
-- Alumno 2
