@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Inicio - Géneros{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Géneros de películas</h1>
+<div class="list-group">
+  {% for g in generos %}
+  <a href="{% url 'home_fernando:genero_detalle' g.slug %}"
+     class="list-group-item list-group-item-action">
+    <h5 class="mb-1">{{ g.nombre }}</h5>
+    <p class="mb-0 text-muted">{{ g.descripcion }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

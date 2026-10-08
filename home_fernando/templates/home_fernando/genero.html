@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ genero.nombre }}{% endblock %}
+
+{% block content %}
+<h1>{{ genero.nombre }}</h1>
+<p class="text-muted">{{ genero.descripcion }}</p>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+  {% for p in genero.peliculas %}
+  <div class="col">
+    <div class="card h-100 shadow-sm">
+      <img src="{% static p.imagen %}" class="card-img-top" alt="{{ p.nombre }}">
+      <div class="card-body">
+        <h6 class="card-title">{{ p.nombre }}</h6>
+        <p class="card-text text-muted">{{ p.anio }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<a href="{% url 'home_fernando:inicio' %}" class="btn btn-outline-dark mt-4">← Volver</a>
+{% endblock %}

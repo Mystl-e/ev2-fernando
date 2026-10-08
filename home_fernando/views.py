@@ -65,11 +65,11 @@ GENEROS = [
 
 
 def inicio(request):
-    return render(request, 'home_fernando_alumno2/inicio.html', {'generos': GENEROS})
+    return render(request, 'home_fernando/inicio.html', {'generos': GENEROS})
 
 
 def genero_detalle(request, slug):
     genero = next((g for g in GENEROS if g['slug'] == slug), None)
     if genero is None:
         raise Http404('Género no encontrado')
-    return render(request, 'home_fernando_alumno2/genero.html', {'genero': genero})
+    return render(request, 'home_fernando/genero.html', {'genero': genero})
